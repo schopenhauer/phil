@@ -1,0 +1,23 @@
+{
+  "name": "phil",
+  "version": "1.0.0",
+  "description": "Missing API for the Philharmonie Luxembourg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "schopenhauer",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:schopenhauer/phil.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "deep-equal": "^1.0.1",
+    "express": "^4.16.3",
+    "moment": "^2.22.1",
+    "osmosis": "^1.1.6"
+  }
+}
