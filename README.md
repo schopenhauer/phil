@@ -20,6 +20,6 @@ curl http://localhost:3000          # all events
 curl http://localhost:3000/page/1   # selected page
 ```
 
-## To do
+## Redis caching
 
-* Caching with Redis/Memcache
+The Redis caching option is not enabled by default. Make sure to configure `REDIS_URL` or `redis://localhost:6379` used by default.

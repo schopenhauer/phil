@@ -1,13 +1,20 @@
+require('dotenv').config();
+
 const osmosis = require('osmosis');
 const moment = require('moment');
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 const equal = require('deep-equal');
 const chalk = require('chalk');
-
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
+
+/*
+  const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
+  const redisClient = require('redis').createClient(REDIS_URL);
+  const cache = require('express-redis-cache')({ client: redisClient });
+*/
 
 const url = 'https://www.philharmonie.lu/en/programm?page=1&a=';
 const frequency = 3600 * 24;
@@ -20,6 +27,7 @@ let stop = false;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// optionally, insert Redis middleware here - cache.route()
 app.get('/', function (req, res) {
   if (!stop || events.length == 0) {
     res.status(503).send({

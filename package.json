@@ -17,8 +17,11 @@
     "body-parser": "^1.18.3",
     "chalk": "^2.4.1",
     "deep-equal": "^1.0.1",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "express-redis-cache": "^1.1.1",
     "moment": "^2.22.1",
-    "osmosis": "^1.1.6"
+    "osmosis": "^1.1.6",
+    "redis": "^2.8.0"
   }
 }
