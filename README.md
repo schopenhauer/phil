@@ -16,8 +16,8 @@ node app.js
 Then, issue the following GET request to fetch events.
 
 ```
-curl http://localhost:3000    # all events
-curl http://localhost:3000/1  # selected page
+curl http://localhost:3000          # all events
+curl http://localhost:3000/page/1   # selected page
 ```
 
 ## To do
