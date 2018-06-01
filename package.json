@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git@github.com:schopenhauer/phil.git"
   },
+  "engines": {
+    "node": "8.11.2",
+    "npm": "6.1.0",
+    "yarn": "1.7.0"
+  },
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -20,7 +25,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-redis-cache": "^1.1.1",
-    "moment": "^2.22.1",
+    "moment": "^2.22.2",
     "osmosis": "^1.1.6",
     "redis": "^2.8.0"
   }
