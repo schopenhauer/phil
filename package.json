@@ -13,16 +13,16 @@
     "url": "git@github.com:schopenhauer/phil.git"
   },
   "engines": {
-    "node": "8.11.2",
-    "npm": "6.1.0",
-    "yarn": "1.7.0"
+    "node": "10.15.0",
+    "npm": "6.7.0",
+    "yarn": "1.13.0"
   },
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "chalk": "^2.4.1",
     "deep-equal": "^1.0.1",
-    "dotenv": "^5.0.1",
+    "dotenv": "^6.2.0",
     "express": "^4.16.3",
     "express-redis-cache": "^1.1.1",
     "moment": "^2.22.2",
