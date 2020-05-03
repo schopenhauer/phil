@@ -16,7 +16,7 @@ const app = express();
   const cache = require('express-redis-cache')({ client: redisClient });
 */
 
-const url = 'https://www.philharmonie.lu/en/programm?page=1&a=';
+const URL = 'https://www.philharmonie.lu/en/programm?page=1&a=';
 const frequency = 3600 * 24;
 
 let events = [];
@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
 
 app.get('/page/:page', function (req, res) {
   let page = req.params.page || 1;
-  fetch(url.replace('page=1', 'page=' + page) + today(), (events) => {
+  fetch(URL.replace('page=1', 'page=' + page) + today(), (events) => {
     res.status(200).send(events);
   });
 });
@@ -61,7 +61,7 @@ function fetch(page, cb) {
   let pageEvents = [];
   console.log(chalk.yellow(`Parsing page ${page}...`));
   osmosis
-    .get(url.replace('page=1', 'page=' + page) + today())
+    .get(URL.replace('page=1', 'page=' + page) + today())
     .find('li')
     .set({
       'title': 'div.description a.eventlink h2',
